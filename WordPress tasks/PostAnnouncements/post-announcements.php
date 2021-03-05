@@ -65,3 +65,26 @@ function rpa_admin_page(){
         }
         
 }
+
+
+function add_before_content($content) {
+    global $announcements;
+    $announcements = get_option('announcements');
+    $index = array_rand($announcements);
+    $item = $announcements[$index];
+    
+    return '<div class="announcement"><h5>'.$item['title'].'</h5><p>'.$item['content'].'</p></div>'.$content;
+}
+
+add_filter('the_content', 'add_before_content');
+
+
+function rpa_add_styles(){
+    //register style
+    wp_register_style('rpa_styles', plugins_url('/css/style.css', __FILE__));
+    //enable style (load in meta of html)
+    wp_enqueue_style('rpa_styles');
+}
+
+add_action('init', 'rpa_add_styles'); 
+

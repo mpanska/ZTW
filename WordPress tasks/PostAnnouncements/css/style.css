@@ -15,3 +15,14 @@
 article .naph_marker{
     display: inline;
 } 
+
+.announcement{
+    background-color: rgb(245, 198, 179);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+
+
