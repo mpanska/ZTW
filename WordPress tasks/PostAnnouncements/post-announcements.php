@@ -11,7 +11,7 @@
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
-
+$announcements = array();
  
 function rpa_admin_actions_register_menu(){
     add_options_page("Post Announcements", "Add Posts Announcements", 'manage_options', "rpa", "rpa_admin_page");
@@ -22,7 +22,8 @@ add_action('admin_menu', 'rpa_admin_actions_register_menu');
 
 function rpa_admin_page(){
     //read current option value
-    $announcements = get_option('announcements');
+	global $announcements;
+	$announcements = get_option('announcements');
     global $_POST;
     // process changes from form
     if(isset($_POST['rpa_to_submit'])){
