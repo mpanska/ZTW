@@ -35,9 +35,13 @@ function rpa_admin_page(){
 
             //put new announcement to an array and update this option
             array_push($announcements, array('title' => $title, 'content' => $pa_content));
-            update_option('announcements', $announcements);
-        }
-    }
+            update_option('announcements', $announcements);			
+        } 
+    } elseif(isset($_POST['rpa_index'])){	
+		echo '<div class="notice notice-success isdismissible"><p>Deleted</p></div>';		
+		array_splice($announcements, $_POST['rpa_index'], 1);
+		update_option('announcements', $announcements);
+	}
 
     //display admin page
     ?>
@@ -55,17 +59,20 @@ function rpa_admin_page(){
     <?php 
         //print out all the announcements
         if(!empty($announcements)){
-            foreach($announcements as $item){ 
+            foreach($announcements as $index=>$item){ 
             ?>
+			<form name="naph_form" method="post">
+				<hr>
                 <h2><?php echo $item["title"]?></h2>
                 <p><?php echo $item["content"]?></p>
-                 
+                <input type="hidden" name="rpa_index" value=<?php echo $index?>>
+				<input type="submit" value="Delete">
+			</form>
             <?php 
             }
         }
         
 }
-
 
 function add_before_content($content) {
     global $announcements;
@@ -73,7 +80,7 @@ function add_before_content($content) {
     $index = array_rand($announcements);
     $item = $announcements[$index];
     
-    return '<div class="announcement"><h5>'.$item['title'].'</h5><p>'.$item['content'].'</p></div>'.$content;
+    return '<div class="announcement"><h5>'.$item['title'].'</h5><p>'.$item['content'].'</p></div><br>'.$content;
 }
 
 add_filter('the_content', 'add_before_content');
