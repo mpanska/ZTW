@@ -1,0 +1,39 @@
+.gray-image{
+	img {
+		filter: grayscale(100%);
+		transition: .3s ease-in-out;
+	}
+
+	&:hover {
+		img {
+			filter: grayscale(0);
+		}
+	}
+}
+
+
+#paint-blue{
+    margin: 10px 100px 20px 70px;
+}
+
+#vangogh{
+    margin: 10px 100px 20px 250px;
+}
+
+#pencil-img{
+    width: 400px;
+    margin: 70px;
+}
+
+
+.home{
+    display: flex;
+    margin: 20px;
+
+    #{&}__heading{
+       margin-left: 70px;
+       margin-top: 50px;
+    }
+
+
+}
