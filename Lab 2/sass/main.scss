@@ -1,7 +1,9 @@
-@import "variables";
+@import "helpers/variables";
+@import "helpers/mixins";
+
 @import "globals";
 
-@import "navbar";
-@import "footer";
+@import "components/navbar";
+@import "components/footer";
 
-@import "homepage";
+@import "pages/homepage";

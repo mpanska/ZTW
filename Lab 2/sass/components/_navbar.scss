@@ -1,0 +1,49 @@
+nav{
+    font-family: $navbar-font;
+    
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+
+	
+    }
+
+
+}
+
+
+a {
+	position: relative;
+	color: inherit;
+	text-decoration: none;
+    
+	&:before {
+		content: '';
+		position: absolute;
+		transition: transform .5s ease;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		transition: transform .5s ease;
+	}
+}
+
+.link-hover {
+	padding-top: 10px;
+    
+	&:before {
+		left: 0px;
+		bottom: -2px;
+		width: 100%;
+		height: 1px;
+		background: #000000;
+		transform: scaleX(0);
+	}
+	&:hover {
+		&:before {
+			transform: scaleX(1.5);
+		}
+	}
+}
+ 

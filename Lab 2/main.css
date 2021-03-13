@@ -91,17 +91,35 @@ footer .social-media img:hover {
   filter: grayscale(0);
 }
 
-#paint-blue {
+#brain-img {
   margin: 10px 100px 20px 70px;
 }
 
-#vangogh {
+@media (max-width: 39.9375em) {
+  #brain-img {
+    margin: 10px;
+  }
+}
+
+#lampman {
   margin: 10px 100px 20px 250px;
+}
+
+@media (max-width: 39.9375em) {
+  #lampman {
+    margin: 10px;
+  }
 }
 
 #pencil-img {
   width: 400px;
   margin: 70px;
+}
+
+@media (max-width: 39.9375em) {
+  #pencil-img {
+    width: 250px;
+  }
 }
 
 .home {
@@ -112,5 +130,38 @@ footer .social-media img:hover {
 .home .home__heading {
   margin-left: 70px;
   margin-top: 50px;
+}
+
+@media (max-width: 63.9375em) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text-n-img {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .text-n-img {
+    flex-direction: column;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.animated-heading {
+  transition: all 0.5s;
+}
+
+.animated-heading:hover {
+  padding-left: 10px;
+  background-color: #d41414;
+  color: white;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=main.css.map */
