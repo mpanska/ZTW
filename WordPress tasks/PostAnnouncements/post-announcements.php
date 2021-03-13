@@ -7,6 +7,7 @@
  * Requires at least: 5.0
  * Requires PHP: 7.2
  * Authors: Marharyta Panska, Kamil Nita
+ * Authors URIs: https://github.com/mpanska, ...
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -58,10 +59,10 @@ function rpa_admin_page(){
     <h1>Admin page</h1>
     <div class="wrap">
         <!-- define the content of announcemet -->
-        <form name="rpa_form" method="post">
+        <form name="naph_form" method="post">
             <input type="hidden" name="rpa_to_submit" value="Y">
-            <p>Announcement title:</br> <input required type="text" name="pa_title" minlength="2" maxlength="20" value="<?php $title ?>"></p>
-            <p>Content:</br> <input required type="text" name="pa_content" minlength="5" maxlength="125" value="<?php $pa_content ?>"></p>
+            <p>Announcement title: <input type="text" name="pa_title" minlength="2" maxlength="20" value="<?php $title ?>"></p>
+            <p>Content: <input type="text" name="pa_content" minlength="5" maxlength="125" value="<?php $pa_content ?>"></p>
             <p class="submit"><input type="submit" value="Submit"></p>
         </form>
     </div>
@@ -71,15 +72,13 @@ function rpa_admin_page(){
         if(!empty($announcements)){
             foreach($announcements as $index=>$item){ 
             ?>
-			<form name="rpa_form" method="post">
+			<form name="naph_form" method="post">
 				<hr>
                 <h2><?php echo $item["title"]?></h2>
                 <p><?php echo $item["content"]?></p>
                 <input type="hidden" name="rpa_index" value=<?php echo $index?>>
-                <div class="controls">
-                    <a href="<?=admin_url("options-general.php?page=rpa-edit&id=".$index)?>">Edit</a>
-                    <input id="delete-btn" type="submit" value="Delete">
-                </div>
+				<a href="<?=admin_url("options-general.php?page=rpa-edit&id=".$index)?>">Edit</a>
+				<input type="submit" value="Delete">
 			</form>
             <?php 
             }
@@ -108,11 +107,11 @@ function rpa_edit_page(){
     <h1>Edit</h1>
     <div class="wrap">
         <!-- define the content of announcemet -->
-        <form name="rpa_form" method="post" action="<?=admin_url("options-general.php?page=rpa")?>">
+        <form name="naph_form" method="post" action="<?=admin_url("options-general.php?page=rpa")?>">
             <input type="hidden" name="rpa_to_edit" value="Y">
 			<input type="hidden" name="pa_id" value=<?php echo $id?>>
-            <p>Announcement title:</br> <input required type="text" name="pa_title" minlength="2" maxlength="20" value="<?php echo $title ?>"></p>
-            <p>Content:</br> <input required type="text" name="pa_content" minlength="5" maxlength="125" value="<?php echo $content ?>"></p> 
+            <p>Announcement title: <input type="text" name="pa_title" minlength="2" maxlength="20" value="<?php echo $title ?>"></p>
+            <p>Content: <input type="text" name="pa_content" minlength="5" maxlength="125" value="<?php echo $content ?>"></p>
             <p class="submit"><input type="submit" value="Edit"></p>
         </form>
     </div>
@@ -141,3 +140,4 @@ function rpa_add_styles(){
 }
 
 add_action('init', 'rpa_add_styles'); 
+
