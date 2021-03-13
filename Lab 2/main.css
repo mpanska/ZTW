@@ -164,4 +164,25 @@ footer .social-media img:hover {
   color: white;
   border-radius: 6px;
 }
+
+.blogs-heading {
+  background: #e7e7e7;
+  background-repeat: no-repeat;
+  margin: 5%;
+  padding: 20px;
+}
+
+.white-box {
+  background-color: white;
+  border-radius: 4px;
+  width: 40%;
+  margin: 5%;
+  padding: 10px 4px;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
 /*# sourceMappingURL=main.css.map */
