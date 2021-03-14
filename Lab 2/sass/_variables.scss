@@ -1,0 +1,18 @@
+$navbar-font: 'Playfair Display SC', serif;
+$body-font: 'Shippori Mincho B1', serif;
+
+$main-text-color: black;
+$black: black;
+$white: white;
+
+$defaultFontSize: 16px;
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
