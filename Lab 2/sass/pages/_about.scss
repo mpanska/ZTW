@@ -1,0 +1,24 @@
+#about-heading {
+    text-align: center;
+}
+
+%about-section {
+    padding: 20px;
+    margin: 5%;
+    border-radius: 4px;
+}
+
+#first-section{
+    @extend %about-section;
+    background-color: rgb(191, 191, 191);
+}
+
+#second-section{
+    @extend %about-section;
+    background-color: rgb(128, 128, 128);
+}
+
+#third-section{
+    @extend %about-section;
+    background-color: rgb(89, 89, 89);
+}

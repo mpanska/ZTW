@@ -185,4 +185,64 @@ footer .social-media img:hover {
   display: flex;
   justify-content: space-evenly;
 }
+<<<<<<< HEAD
+=======
+
+#about-heading {
+  text-align: center;
+}
+
+#first-section, #second-section, #third-section {
+  padding: 20px;
+  margin: 5%;
+  border-radius: 4px;
+}
+
+#first-section {
+  background-color: #bfbfbf;
+}
+
+#second-section {
+  background-color: gray;
+}
+
+#third-section {
+  background-color: #595959;
+}
+
+.contact-container {
+  background-color: #e7e7e7;
+  padding: 20px;
+  margin: 5%;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+input[type=submit] {
+  background-color: #d41414;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Shippori Mincho B1", serif;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #be0000;
+}
+
+#subject {
+  height: 200px;
+}
+>>>>>>> about and contact
 /*# sourceMappingURL=main.css.map */
