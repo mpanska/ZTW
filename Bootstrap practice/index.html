@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>Travel</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!-- MDB -->
+    <!-- CHART JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
   </head>
   <body>
@@ -25,7 +28,7 @@
         <!-- Container wrapper -->
         <div class="container-fluid">
         <!-- Navbar brand -->
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="#">Travel</a>
           <!-- Toggle button -->
           <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
@@ -102,14 +105,17 @@
 
               <div class="col-md-10">
                 <!-- Heading -->
-                <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Podróżowanie</h2>
+                <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                  <h2 class="display-4 font-weight-bold white-text pt-5 mb-2" >Traveling</h2>
+                </div>
                 <!-- Divider -->
                 <hr class="hr-light">
+                <div data-aos="fade-up" data-aos-duration="2000">
+                  <h4 class="white-text my4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consequuntur.</h4>
+                  <button type="button" class="btn btn-outline-black">More information <i class="fas fa-book ml-2"></i></button>
+                </div>
                 <!-- Description -->
-                <h4 class="white-text my4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti consequuntur.</h4>
-                <button type="button" class="btn btn-outline-white">Dowiedz się więcej<i class="fas fa-book ml-2"></i></button>
               </div>
-
             </div>
           </div>
         </div>
@@ -117,24 +123,24 @@
       <!--/.Mask-->
 
     </header>
-
-
   <!--Main layout-->
     <main class="mt-5">
+
+      <!--Last travels -->
       <div class="container">
 
         <!--Section: LastTravels-->
         <section id="lastTravels" class="text-center">
           <!--Grid row-->
-          <div class="row">
+          <div class="row" data-aos="fade-down" data-aos-duration="500">
             <!--Grid column-->
-            <div class="col-lg-4 col-md-12 mb-4">
+            <div class="col-lg-4 col-md-12 mb-4" >
               <div class="bg-image ripple shadow-1-strong rounded hover-zoom" data-mdb-ripple-color="light">
                 <img src="img/trip1.jpg" class="img-fluid" alt="trip1">
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 1</h4>
+                <h4 class="my-4 font-weight-bold">Trip 1</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -150,7 +156,7 @@
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 2</h4>
+                <h4 class="my-4 font-weight-bold">Trip 2</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -166,7 +172,7 @@
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 3</h4>
+                <h4 class="my-4 font-weight-bold">Trip 3</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -179,7 +185,7 @@
           <!--Grid row-->
 
           <!--Grid row-->
-          <div class="row">
+          <div class="row" data-aos="fade-up" data-aos-duration="500">
             <!--Grid column-->
             <div class="col-lg-4 col-md-12 mb-4">
               <div class="bg-image ripple shadow-1-strong rounded hover-zoom" data-mdb-ripple-color="light">
@@ -187,7 +193,7 @@
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 4</h4>
+                <h4 class="my-4 font-weight-bold">Trip 4</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -203,7 +209,7 @@
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 5</h4>
+                <h4 class="my-4 font-weight-bold">Trip 5</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -219,7 +225,7 @@
                 <a href="#!">
                   <div class="mask "></div>
                 </a>
-                <h4 class="my-4 font-weight-bold">Podróż 6</h4>
+                <h4 class="my-4 font-weight-bold">Trip 6</h4>
                 <p class="grey-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores n
                   am, aperiam minima assumenda deleniti hic.
@@ -234,8 +240,210 @@
         <hr class="my-5">
       </div>
 
+
+
+    <section id="workers-section">
+      <!-- Carousel wrapper -->
+      <div id="workersCarousel" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel" data-aos="zoom-out" data-aos-duration="1000">
+        <h2>Our Workers</h2>
+      <!-- Controls -->
+        <div class="d-flex justify-content-center mb-4">
+          <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#workersCarousel" data-mdb-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next position-relative" type="button" data-mdb-target="#workersCarousel" data-mdb-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      <!-- Inner -->
+        <div class="carousel-inner py-4">
+          <!-- Single item -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top" alt="Carl Smiths"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Carl Smiths</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta. 
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1031&q=80"
+                      class="card-img-top" alt="Warren Wong"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Warren Wong</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1551292831-023188e78222?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top"
+                      alt="Jane Roberts"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Jane Roberts</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1495383294417-3166600af8a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top" alt="Alice Glass"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Alice Glass</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1508179640279-deaa2ea35e82?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top" alt="Chester Wader"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Chester Wader</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1513302052104-b818ed7324b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top" alt="Harley Williams"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Harley Williams</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Single item -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1612108540619-0b26339142d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                      class="card-img-top" alt="John Merin"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">John Merin</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1611861005671-37d30559fb2c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                      class="card-img-top"
+                      alt="Jake Long"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Jake Long</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                  <div class="card">
+                    <img
+                      src="https://images.unsplash.com/photo-1496360784265-52a2509684f3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                      class="card-img-top"
+                      alt="Nicole Miller"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Nicole Miller</h5>
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam autem dolores enim 
+                        fugit nemo illum temporibus laudantium error soluta.
+                      </p>
+                      <a href="#!" class="btn btn-primary">Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Inner -->
+        <hr class="my-5">
+      </div>
+      <!-- Carousel wrapper -->
+    </section>
+
+
     <!-- Section Chart -->
-      <div class="container">
+      <div class="container" data-aos="zoom-out" data-aos-duration="1000">
         <h2 class="text-center">The most popular travel destinations</h2>
         <canvas id="travelChart"></canvas>
         <hr class="my-5">
@@ -259,8 +467,8 @@
 
     <!--Section: FAQ-->
     <div class="container ">
-      <section id="faq" class="text-center">
-        <div class="accordion container align-items-center justify-content-center" id="accordionExample">
+      <section id="faq">
+        <div class="accordion container align-items-center justify-content-center" id="accordionExample" data-aos="fade-down" data-aos-duration="500">
           <h2>Frequently asked questions</h2>
           <!-- item 1 -->
           <div class="accordion-item">
@@ -340,7 +548,7 @@
                 aria-expanded="false"
                 aria-controls="collapseFour"
               >
-                Question nr. 3
+                Question nr. 4
               </button>
             </h2>
             <div
@@ -360,12 +568,7 @@
         </div>
       </section>
     </div>
-
-
-    
     <!--Section: FAQ-->
-
-
   </main>
   
  <!--Main layout-->
@@ -406,6 +609,7 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init();</script>
   </body>
 </html>
