@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
+import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.entity.Book;
+import pl.edu.pwr.ztw.library.repo.AuthorRepo;
 import pl.edu.pwr.ztw.library.repo.BookRepo;
 
 import java.util.ArrayList;
@@ -54,10 +56,30 @@ public class BookServiceImpl implements BookService {
         bookRepo.deleteById(id);
     }
 
+    public Book setAuthor(Book book, Author author) {
+        Long id = book.getId();
+        if (!bookRepo.existsById(id))
+            throw new RuntimeException("Book not found: " + id);
+        book.setAuthor(author);
+        return bookRepo.save(book);
+    }
+
+    AuthorService authorService;
+
     @EventListener(ApplicationReadyEvent.class)
     public void fillDB() {
-        add(new Book("Potop", "Henryk Sienkiewicz", 936));
-        add(new Book("Wesele", "Stanislaw Reymont", 150));
-        add(new Book("Dziady", "Adam Mickiewicz", 292));
+
+        Book book1 = new Book("Potop", null, 936);
+//        book1.setAuthor(authorService.findById(1L));
+        add(book1);
+
+        Book book2 = new Book("Wesele", null, 150);
+//        book2.setAuthor(authorService.findById(2L));
+        add(book2);
+
+        Book book3 = new Book("Dziady", null, 292);
+//        book3.setAuthor(authorService.findById(3L));
+        add(book3);
+
     }
 }
