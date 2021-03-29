@@ -13,7 +13,6 @@ import java.util.List;
 public class AuthorServiceImpl implements AuthorService{
 
     private AuthorRepo authorRepo;
-    private BookService bs;
 
     @Autowired
     public AuthorServiceImpl(AuthorRepo authorRepo) {
