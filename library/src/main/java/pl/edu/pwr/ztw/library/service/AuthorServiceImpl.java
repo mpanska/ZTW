@@ -3,6 +3,7 @@ package pl.edu.pwr.ztw.library.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.pwr.ztw.library.entity.Author;
+import pl.edu.pwr.ztw.library.exception.AuthorNotFoundException;
 import pl.edu.pwr.ztw.library.repo.AuthorRepo;
 
 import java.util.ArrayList;
@@ -30,7 +31,7 @@ public class AuthorServiceImpl implements AuthorService{
     @Override
     public Author findById(Long id) {
         return authorRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Author not found: " + id));
+                .orElseThrow(() -> new AuthorNotFoundException(id));
     }
 
     @Override
@@ -43,14 +44,14 @@ public class AuthorServiceImpl implements AuthorService{
     public Author update(Author author) {
         Long id = author.getId();
         if (!authorRepo.existsById(id))
-            throw new RuntimeException("Author not found: " + id);
+            throw new AuthorNotFoundException(id);
         return authorRepo.save(author);
     }
 
     @Override
     public void deleteById(Long id) {
         if (!authorRepo.existsById(id))
-            throw new RuntimeException("Author not found: " + id);
+            throw new AuthorNotFoundException(id);
         authorRepo.deleteById(id);
     }
 }

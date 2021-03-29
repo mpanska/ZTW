@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.entity.Book;
+import pl.edu.pwr.ztw.library.exception.BookNotFoundException;
 import pl.edu.pwr.ztw.library.repo.BookRepo;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book findById(Long id) {
         return bookRepo.findById(id)
-                .orElseThrow(() -> new RuntimeException("Book not found: " + id));
+                .orElseThrow(() -> new BookNotFoundException(id));
     }
 
     @Override
@@ -42,22 +43,14 @@ public class BookServiceImpl implements BookService {
     public Book update(Book book) {
         Long id = book.getId();
         if (!bookRepo.existsById(id))
-            throw new RuntimeException("Book not found: " + id);
+            throw new BookNotFoundException(id);
         return bookRepo.save(book);
     }
 
     @Override
     public void deleteById(Long id) {
         if (!bookRepo.existsById(id))
-            throw new RuntimeException("Book not found: " + id);
+            throw new BookNotFoundException(id);
         bookRepo.deleteById(id);
-    }
-
-    public Book setAuthor(Book book, Author author) {
-        Long id = book.getId();
-        if (!bookRepo.existsById(id))
-            throw new RuntimeException("Book not found: " + id);
-        book.setAuthor(author);
-        return bookRepo.save(book);
     }
 }
