@@ -2,7 +2,6 @@ package pl.edu.pwr.ztw.library.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.entity.Book;
 import pl.edu.pwr.ztw.library.exception.BookNotFoundException;
 import pl.edu.pwr.ztw.library.repo.BookRepo;
