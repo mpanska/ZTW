@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-//@Table(name="BOOKS")
 public class Book {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,6 +56,4 @@ public class Book {
     public void setPages(int pages) {
         this.pages = pages;
     }
-
-
 }

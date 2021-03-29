@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-//@Table(name="AUTHOR")
 public class Author {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -15,13 +14,9 @@ public class Author {
     private String authorName;
     private String authorLastName;
 
-    @OneToMany(mappedBy="author")
-    private List<Book> books;
-
     public Author(String authorName, String authorLastName) {
         this.authorName = authorName;
         this.authorLastName = authorLastName;
-        this.books = new ArrayList<>();
     }
 
     public Author() {
@@ -51,18 +46,4 @@ public class Author {
     public void setAuthorLastName(String authorLastName) {
         this.authorLastName = authorLastName;
     }
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void addBooks(Book book) {
-        this.books.add(book);
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
-    }
 }
-
-
