@@ -56,16 +56,16 @@ public class AuthorServiceImpl implements AuthorService{
         authorRepo.deleteById(id);
     }
 
-    @EventListener(ApplicationReadyEvent.class)
-    public void fillDB() {
-
-        Author a1 = new Author("Henryk", " Sienkiewicz");
-        add(a1);
-
-        Author a2 = new Author("Stanislaw", "Reymont");
-        add(a2);
-
-        Author a3 = new Author("Adam", "Mickiewicz");
-        add(a3);
-    }
+//    @EventListener(ApplicationReadyEvent.class)
+//    public void fillDB() {
+//
+//        Author a1 = new Author("Henryk", " Sienkiewicz");
+//        add(a1);
+//
+//        Author a2 = new Author("Stanislaw", "Reymont");
+//        add(a2);
+//
+//        Author a3 = new Author("Adam", "Mickiewicz");
+//        add(a3);
+//    }
 }
