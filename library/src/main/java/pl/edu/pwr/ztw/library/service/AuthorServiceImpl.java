@@ -1,8 +1,6 @@
 package pl.edu.pwr.ztw.library.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.repo.AuthorRepo;
@@ -55,17 +53,4 @@ public class AuthorServiceImpl implements AuthorService{
             throw new RuntimeException("Author not found: " + id);
         authorRepo.deleteById(id);
     }
-
-//    @EventListener(ApplicationReadyEvent.class)
-//    public void fillDB() {
-//
-//        Author a1 = new Author("Henryk", " Sienkiewicz");
-//        add(a1);
-//
-//        Author a2 = new Author("Stanislaw", "Reymont");
-//        add(a2);
-//
-//        Author a3 = new Author("Adam", "Mickiewicz");
-//        add(a3);
-//    }
 }

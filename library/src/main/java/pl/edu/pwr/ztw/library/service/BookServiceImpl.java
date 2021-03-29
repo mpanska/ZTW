@@ -1,12 +1,9 @@
 package pl.edu.pwr.ztw.library.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
-import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.entity.Book;
-import pl.edu.pwr.ztw.library.repo.AuthorRepo;
 import pl.edu.pwr.ztw.library.repo.BookRepo;
 
 import java.util.ArrayList;
