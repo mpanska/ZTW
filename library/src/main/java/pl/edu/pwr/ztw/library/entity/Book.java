@@ -15,8 +15,10 @@ public class Book {
     @JoinColumn(name="author_id", nullable=false)
     private Author author;
     private int pages;
+    private boolean isBorrowed;
 
     public Book() {
+        isBorrowed = false;
     }
 
     public Book(String title, Author author, int pages) {
@@ -55,5 +57,13 @@ public class Book {
 
     public void setPages(int pages) {
         this.pages = pages;
+    }
+
+    public boolean isBorrowed() {
+        return isBorrowed;
+    }
+
+    public void setBorrowed(boolean borrowed) {
+        isBorrowed = borrowed;
     }
 }
