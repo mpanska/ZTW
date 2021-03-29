@@ -63,23 +63,4 @@ public class BookServiceImpl implements BookService {
         book.setAuthor(author);
         return bookRepo.save(book);
     }
-
-    AuthorService authorService;
-
-//    @EventListener(ApplicationReadyEvent.class)
-//    public void fillDB() {
-//
-//        Book book1 = new Book("Potop", null, 936);
-////        book1.setAuthor(authorService.findById(1L));
-//        add(book1);
-//
-//        Book book2 = new Book("Wesele", null, 150);
-////        book2.setAuthor(authorService.findById(2L));
-//        add(book2);
-//
-//        Book book3 = new Book("Dziady", null, 292);
-////        book3.setAuthor(authorService.findById(3L));
-//        add(book3);
-//
-//    }
 }
