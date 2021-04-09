@@ -1,0 +1,25 @@
+.blogs-heading{
+    background: rgb(231, 231, 231);
+    background-repeat: no-repeat;
+    margin: 5%;
+    padding: 20px;
+}
+
+.white-box{
+    background-color: $primary-color;
+    border-radius: 4px;
+    width: 40%;
+    margin: 5%;
+    padding: 10px 20px;
+}
+
+.container{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include breakpoint-down(small){
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Shippori+Mincho+B1:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a class="link-hover" href="#">Home</a> </li>
+            <li> <a class="link-hover" href="blogs.html">Blogs</a> </li>
+            <li> <a class="link-hover" href="about.html">About</a> </li>
+            <li> <a class="link-hover" href="contact.html">Contact</a> </li>
+        </ul>
+    </nav>
+
+    <input type="button" id="stylechange" onclick="toggleTheme()" value="Change theme"> 
+
+    <main>
+        <div class="home">
+            <div class="home__left">
+                <h1 class="home__heading">Homepage heading</h1>
+                <div class="gray-image">
+                    <img id="brain-img" src="images/brain.JPG" alt="lady and brain"/>
+                </div>
+                <div class="gray-image">
+                    <img id="lampman" src="images/lampman.JPG" alt="man with lamp head"/>
+                </div> 
+            </div>
+
+            <div class="home__right">
+                <div class="gray-image text-n-img">
+                    <div>
+                        <h2 class="animated-heading">Headig nr. 2</h2>
+                        <p class="text-right">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi illum corrupti sint atque illo 
+                            accusantium cumque reiciendis ea eveniet fugit inventore minima maxime quibusdam blanditiis quisquam repudiandae voluptatum, in perferendis!
+                        </p>
+                        <h2 class="animated-heading">Headig nr. 3</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi illum corrupti sint atque illo 
+                            accusantium cumque reiciendis ea eveniet fugit inventore minima maxime quibusdam blanditiis quisquam repudiandae voluptatum, in perferendis!
+                        </p>
+                    </div>
+                        
+                    <img id="pencil-img" src="images/pencilman.jpg" alt="man with pencil"/>
+                </div> 
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-right-left">
+            <div class="contact">
+                <div class="footer-text" id="contact">Contact us:</div>
+                <a href="#">ouraddress@mail.com</a>
+            </div>
+            
+            <div class="social-media">
+                <div class="footer-images">
+                    <a href="#"><img src="/Lab 2/images/logo-facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="/Lab 2/images/logo-instagram.svg" alt="instagram"></a>
+                    <a href="#"><img src="/Lab 2/images/logo-twitter.svg" alt="twitter"></a>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <script src="index.js"></script>
+</body>
+</html>

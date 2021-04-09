@@ -1,0 +1,12 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+
+@import "globals";
+
+@import "components/navbar";
+@import "components/footer";
+
+@import "pages/homepage";
+@import "pages/blogs";
+@import "pages/about";
+@import "pages/contact";

@@ -1,0 +1,307 @@
+body {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 16px;
+  margin: auto;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 300px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.dark footer {
+  background-color: #d41414;
+  color: white;
+}
+
+.dark .link-hover:before {
+  background: white;
+}
+
+.dark .blogs-heading {
+  background: #4e4e4e;
+}
+
+.dark .white-box {
+  color: black;
+}
+
+.dark .contact-container {
+  background-color: #404040;
+}
+
+.dark #first-section {
+  background-color: #4e4e4e;
+}
+
+.dark #second-section {
+  background-color: #353535;
+}
+
+.dark #third-section {
+  background-color: #282828;
+}
+
+nav {
+  font-family: "Playfair Display SC", serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:before {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+.link-hover {
+  padding-top: 10px;
+}
+
+.link-hover:before {
+  left: 0px;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: black;
+  transform: scaleX(0);
+}
+
+.link-hover:hover:before {
+  transform: scaleX(1.5);
+}
+
+footer {
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+.footer-right-left {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media img {
+  width: 30px;
+  transition: 0.3s ease-in-out 0s;
+  padding: 10px;
+}
+
+.social-media img:hover {
+  transform: translateY(-0.3125rem);
+}
+
+.footer-images {
+  margin-top: 10px;
+}
+
+.gray-image img {
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+
+.gray-image:hover img {
+  filter: grayscale(0);
+}
+
+#brain-img {
+  margin: 10px 100px 20px 70px;
+}
+
+@media (max-width: 39.9375em) {
+  #brain-img {
+    margin: 10px;
+  }
+}
+
+#lampman {
+  margin: 10px 100px 20px 250px;
+}
+
+@media (max-width: 39.9375em) {
+  #lampman {
+    margin: 10px;
+  }
+}
+
+#pencil-img {
+  width: 400px;
+  margin: 70px;
+}
+
+@media (max-width: 39.9375em) {
+  #pencil-img {
+    width: 250px;
+  }
+}
+
+.home {
+  display: flex;
+  margin: 20px;
+}
+
+.home .home__heading {
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+@media (max-width: 63.9375em) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text-n-img {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .text-n-img {
+    flex-direction: column;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.animated-heading {
+  transition: all 0.5s;
+}
+
+.animated-heading:hover {
+  padding-left: 10px;
+  background-color: #d41414;
+  color: white;
+  border-radius: 6px;
+}
+
+#stylechange {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 6px;
+  border: none;
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#stylechange:hover {
+  transition: 0.4s ease-out;
+  background-color: #d41414;
+  color: white;
+}
+
+.blogs-heading {
+  background: #e7e7e7;
+  background-repeat: no-repeat;
+  margin: 5%;
+  padding: 20px;
+}
+
+.white-box {
+  background-color: white;
+  border-radius: 4px;
+  width: 40%;
+  margin: 5%;
+  padding: 10px 20px;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 39.9375em) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+#about-heading {
+  text-align: center;
+}
+
+#first-section, #second-section, #third-section {
+  padding: 20px;
+  margin: 5%;
+  border-radius: 4px;
+}
+
+#first-section {
+  background-color: #bebebe;
+}
+
+#second-section {
+  background-color: #9c9c9c;
+}
+
+#third-section {
+  background-color: #797979;
+}
+
+.contact-container {
+  background-color: #e7e7e7;
+  padding: 20px;
+  margin: 5%;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+input[type=submit] {
+  background-color: #d41414;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Shippori Mincho B1", serif;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+input[type=submit]:hover {
+  background-color: #be0000;
+}
+
+#subject {
+  height: 200px;
+}
+/*# sourceMappingURL=main.css.map */
