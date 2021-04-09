@@ -25,9 +25,6 @@ class AuthorDataService {
         return http.delete(`/authors`);
     }
 
-    // findByTitle(title) {
-    //     return http.get(`/tutorials?title=${title}`);
-    // }
 }
 
 export default new AuthorDataService();

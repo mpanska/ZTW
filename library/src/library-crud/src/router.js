@@ -8,19 +8,24 @@ export default new Router({
     routes: [
         {
             path: "/",
-            alias: "/authors",
+            alias: "/home",
+            name: "home",
+            component: () => import("./components/Home")
+        },
+        {
+            path: "/authors",
             name: "authors",
             component: () => import("./components/Authors")
         },
-        // {
-        //     path: "/tutorials/:id",
-        //     name: "tutorial-details",
-        //     component: () => import("./components/Tutorial")
-        // },
         {
             path: "/addAuthor",
             name: "addAuthor",
             component: () => import("./components/AuthorsForm")
+        },
+        {
+            path: "/authors/:id",
+            name: "authors",
+            component: () => import("./components/AuthorsEditForm")
         },
         {
             path: "/books",
