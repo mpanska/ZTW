@@ -8,10 +8,11 @@ import pl.edu.pwr.ztw.library.entity.Author;
 import pl.edu.pwr.ztw.library.service.AuthorService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/authors")
 public class AuthorController {
 
-    private AuthorService authorService;
+    private final AuthorService authorService;
 
     @Autowired
     public AuthorController(AuthorService authorService) {
@@ -22,6 +23,7 @@ public class AuthorController {
     public ResponseEntity<?> getAuthors() {
         return new ResponseEntity<>(authorService.findAll(), HttpStatus.OK);
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getAuthor(@PathVariable Long id) {

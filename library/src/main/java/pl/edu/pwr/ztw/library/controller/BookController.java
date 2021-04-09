@@ -8,10 +8,11 @@ import pl.edu.pwr.ztw.library.entity.Book;
 import pl.edu.pwr.ztw.library.service.BookService;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/books")
 public class BookController {
 
-    private BookService bookService;
+    private final BookService bookService;
 
     @Autowired
     public BookController(BookService bookService) {
