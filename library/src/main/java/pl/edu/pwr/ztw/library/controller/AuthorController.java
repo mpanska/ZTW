@@ -35,9 +35,9 @@ public class AuthorController {
         return new ResponseEntity<>(authorService.add(author), HttpStatus.CREATED);
     }
 
-    @PutMapping
-    public ResponseEntity<?> updateAuthor(@RequestBody Author author) {
-        return new ResponseEntity<>(authorService.update(author), HttpStatus.OK);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateAuthor(@PathVariable Long id, @RequestBody Author author) {
+        return new ResponseEntity<>(authorService.update(id, author), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")

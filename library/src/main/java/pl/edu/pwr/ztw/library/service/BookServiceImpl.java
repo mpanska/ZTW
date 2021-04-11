@@ -39,10 +39,10 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book update(Book book) {
-        Long id = book.getId();
+    public Book update(Long id, Book book) {
         if (!bookRepo.existsById(id))
             throw new BookNotFoundException(id);
+        book.setId(id);
         return bookRepo.save(book);
     }
 
