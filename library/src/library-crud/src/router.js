@@ -32,5 +32,15 @@ export default new Router({
             name: "books",
             component: () => import("./components/Books")
         },
+        {
+            path: "/addBook",
+            name: "addBook",
+            component: () => import("./components/BookForm")
+        },
+        {
+            path: "/books/:id",
+            name: "books",
+            component: () => import("./components/BookEditForm")
+        }
     ]
 });

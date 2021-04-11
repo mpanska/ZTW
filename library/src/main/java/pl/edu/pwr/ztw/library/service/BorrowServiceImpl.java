@@ -21,7 +21,7 @@ public class BorrowServiceImpl implements BorrowService {
         Book book = bookService.findById(id);
         if (!book.isBorrowed()) {
             book.setBorrowed(true);
-            bookService.update(book);
+            bookService.update(id, book);
         }
         else
             throw new BookAlreadyBorrowedException(id);
@@ -32,7 +32,7 @@ public class BorrowServiceImpl implements BorrowService {
         Book book = bookService.findById(id);
         if (book.isBorrowed()) {
             book.setBorrowed(false);
-            bookService.update(book);
+            bookService.update(id, book);
         }
         else
             throw new BookAlreadyReturnedException(id);

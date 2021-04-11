@@ -40,10 +40,10 @@ public class AuthorServiceImpl implements AuthorService{
     }
 
     @Override
-    public Author update(Author author) {
-        Long id = author.getId();
+    public Author update(Long id, Author author) {
         if (!authorRepo.existsById(id))
             throw new AuthorNotFoundException(id);
+        author.setId(id);
         return authorRepo.save(author);
     }
 

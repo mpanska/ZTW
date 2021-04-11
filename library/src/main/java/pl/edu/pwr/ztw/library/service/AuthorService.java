@@ -9,7 +9,7 @@ public interface AuthorService {
 
     public Author add(Author author);
 
-    public Author update(Author author);
+    public Author update(Long id, Author author);
 
     public void deleteById(Long id);
 }

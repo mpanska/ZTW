@@ -32,6 +32,9 @@
       </tr>
       </tbody>
     </table>
+    <button class="btn btn-outline-primary">
+      <router-link to="/addBook" class="nav-link">Add book</router-link>
+    </button>
   </div>
 </template>
 
