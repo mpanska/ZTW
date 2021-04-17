@@ -1,7 +1,8 @@
-const axios = require("axios") 
-
+const axios = require('axios') 
 const { GraphQLServer } = require('graphql-yoga');
 
+todosList = [];
+usersList = [];
 
 const resolvers = {
     Query: {
@@ -16,7 +17,7 @@ const resolvers = {
         }
     },
     ToDoItem:{
-        user: (parent, args, context, info) => {
+        user: (parent, args, context, info) => { 
             return usersList.find(u => u.id == parent.user_id);
         }
     },
@@ -35,28 +36,34 @@ function todoById(parent, args, context, info){
 
 function userById(parent, args, context, info){
     return usersList.find(u => u.id == args.id);
-} 
-
-    async function getRestUsersList(){
-        try {
-            const users = await axios.get("https://jsonplaceholder.typicode.com/users")
-            console.log(users);
-            return users.data.map(({ id, name, email, username }) => ({
-                id: id,
-                name: name,
-                email: email,
-                login: username,
-        }))
-        } catch (error) {
-            throw error
-        }
-   } 
+}      
 
 
+async function getRestUsersList(){
+    try {
+        const users = await axios.get("https://jsonplaceholder.typicode.com/users")
+        usersList = [users] 
+            
+        console.log(usersList);
+
+        return users.data.map(({ id, name, email, username }) => ({
+            id: id,
+            name: name,
+            email: email,
+            login: username,
+    }))
+    } catch (error) {
+        //throw error
+        console.log(error);  
+    }
+}  
+  
 async function getRestTodoList(){
     try {
         const todo = await axios.get("https://jsonplaceholder.typicode.com/todos")
-        console.log(todo);
+        ///console.log(todo);
+        todosList = [todo] 
+
         return todo.data.map(({ id, title, completed, user_id }) => ({
             id: id,
             title: title,
@@ -64,6 +71,7 @@ async function getRestTodoList(){
             user_id: user_id,
     }))
     } catch (error) {
-        throw error
+        //throw error
+        console.log(error);
     }
-} 
+}
