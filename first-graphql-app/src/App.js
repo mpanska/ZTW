@@ -1,8 +1,8 @@
 const axios = require('axios') 
 const { GraphQLServer } = require('graphql-yoga');
 
-todosList = [];
-usersList = [];
+var todosList = [];
+var usersList = [];
 
 const resolvers = {
     Query: {
@@ -30,11 +30,32 @@ const server = new GraphQLServer({
 
 server.start(() => console.log(`Server is running on http://localhost:4000`));
 
-function todoById(parent, args, context, info){
+async function todoById(parent, args, context, info){
+    const todo = await axios.get("https://jsonplaceholder.typicode.com/todos")
+
+    todosList =
+        todo.data.map(({ id, title, completed, user_id }) => ({
+            id: id,
+            title: title,
+            completed: completed,
+            user_id: user_id,
+        }))
+
     return todosList.find(t => t.id == args.id);
 }
 
-function userById(parent, args, context, info){
+async function userById(parent, args, context, info){
+    const users = await axios.get("https://jsonplaceholder.typicode.com/users")
+
+    usersList = 
+        users.data.map(({id, name, email, username }) => ({
+            id: id,
+            name: name,
+            email: email,
+            login: username,
+        }))
+    ;
+
     return usersList.find(u => u.id == args.id);
 }      
 
@@ -42,9 +63,6 @@ function userById(parent, args, context, info){
 async function getRestUsersList(){
     try {
         const users = await axios.get("https://jsonplaceholder.typicode.com/users")
-        usersList = [users] 
-            
-        console.log(usersList);
 
         return users.data.map(({ id, name, email, username }) => ({
             id: id,
@@ -61,14 +79,13 @@ async function getRestUsersList(){
 async function getRestTodoList(){
     try {
         const todo = await axios.get("https://jsonplaceholder.typicode.com/todos")
-        ///console.log(todo);
-        todosList = [todo] 
 
         return todo.data.map(({ id, title, completed, user_id }) => ({
             id: id,
             title: title,
             completed: completed,
             user_id: user_id,
+            
     }))
     } catch (error) {
         //throw error
