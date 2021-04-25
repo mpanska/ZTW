@@ -4,11 +4,11 @@ import Link from 'gatsby-link'
 const Header = () => (
     <div
         style={{
-            background: 'blue',
+            background: '#882cb0',
             marginBottom: '1.45rem',
             marginTop:'0px',
             display:'block',
-            boxShadow:'0px 0px 7px black', 
+            boxShadow:'0px 0px 7px gray', 
         }}
     >
         <div
@@ -24,6 +24,7 @@ const Header = () => (
                     style={{
                         color: 'white',
                         textDecoration: 'none',
+                        fontSize: '1.5rem',
                     }}
                 >
                     Static Blog by Gatsby JS
