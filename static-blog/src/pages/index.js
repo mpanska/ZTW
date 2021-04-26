@@ -39,6 +39,8 @@ const IndexPage = ({data}) => {
         placeholder="Search posts"
         value={state.query}
         onChange={handleInputChange}
+
+        style={{marginBottom: '20px', width: '400px'}}
       />
       <div>
         {posts.map(({node}) => (
@@ -47,10 +49,11 @@ const IndexPage = ({data}) => {
               textDecoration: 'none', color: 'inherit'
               }}>
               <h3 className="title">{node.frontmatter.title}</h3>
-              <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />  
+              
+              <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} style={{width: '520px', marginTop: '16px', matginBottom: '20px'}}/>  
             </Link>
-            <p className="author">Author: <i>{node.frontmatter.author}</i></p>
-            <p className="date">{node.frontmatter.date} {node.timeToRead}min read</p>
+            <p style={{marginTop: '14px'}} className="author">Author: <i>{node.frontmatter.author}</i></p>
+            <p className="date">{node.frontmatter.date} {node.timeToRead} min read</p>
             <p className="excerpt">{node.excerpt}</p>
           </div>
         ))}
@@ -76,7 +79,7 @@ query HomePageQuery{
           author
           featuredImage {
             childImageSharp {
-              fluid(maxWidth: 200) {
+              fluid(maxWidth: 2048, quality: 90) {
                 ...GatsbyImageSharpFluid
               }
             }
