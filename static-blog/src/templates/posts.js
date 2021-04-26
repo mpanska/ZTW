@@ -14,10 +14,10 @@ export default ({ data }) => {
     return (
         <Layout>
             <div>
-                <h1>{post.frontmatter.title}</h1>
-                <Img fluid={featuredImgFluid} />
-                <h4 style={{color: 'rgb(165, 164, 164)'}}>{post.frontmatter.author} 
-                    <span style={{fontSize: '0.8em'}}> -{post.frontmatter.date}</span>
+                <h1 style={{textAlign: 'center'}}>{post.frontmatter.title}</h1>
+                <Img  fluid={featuredImgFluid} />
+                <h4 style={{color: 'rgb(165, 164, 164)', marginTop: '20px'}}>{post.frontmatter.author} 
+                    <span style={{fontSize: '0.8em'}}> - {post.frontmatter.date}</span>
                 </h4>
                 <div dangerouslySetInnerHTML = {{ __html: post.html }}/>
             </div>
@@ -36,7 +36,7 @@ export const query = graphql`
                 date
                 featuredImage {
                     childImageSharp {
-                      fluid(maxWidth: 200) {
+                      fluid(maxWidth: 1048, quality: 90) {
                         ...GatsbyImageSharpFluid
                       }
                     }
@@ -45,3 +45,6 @@ export const query = graphql`
         }
     }
 `;
+
+
+
